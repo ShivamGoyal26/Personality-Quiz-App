@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personality_quiz/types.dart';
+import './PersonalityQuiz.dart';
 
 void main() {
   runApp(MaterialApp(
