@@ -11,12 +11,11 @@ class PerAns extends StatelessWidget {
       children: <Widget>[
         Container(
             decoration: BoxDecoration(
-              // color: Colors.teal,
               borderRadius: BorderRadius.all(Radius.circular(8.0)),
             ),
             width: 200,
             height: 200,
-            child: Image.asset('$imagee', color: Colors.amber)),
+            child: Image.asset(imagee)),
         Container(
           margin: EdgeInsets.all(20),
           width: double.infinity,

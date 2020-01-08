@@ -18,8 +18,8 @@ class _CrapState extends State<Crap> {
     {
       'que': 'Pick One',
       'ans': [
-        {'text': '1st', 'score': 10, 'image': '/assets/images/d.jpeg'},
-        {'text': '2nd', 'score': 0, 'image': '/assets/images/d.jpeg'},
+        {'text': '1st', 'score': 10, 'image': 'assets/images/d.jpeg'},
+        {'text': '2nd', 'score': 0, 'image': 'assets/images/d.jpeg'},
       ],
     },
     {
