@@ -1,4 +1,4 @@
-import 'dart:ffi';
+// import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:personality_quiz/main.dart';
@@ -12,6 +12,7 @@ class Crap extends StatefulWidget {
 
 class _CrapState extends State<Crap> {
   var _questionIndex = 0;
+  var _totalscore = 0;
 
   final _personalitytriatquestions = const [
     {
@@ -40,15 +41,14 @@ class _CrapState extends State<Crap> {
     },
   ];
 
-  void _answerQuestion() {
-    // _totalScore = _totalScore + score;
-
+  void _answerQuestion(int score) {
+    _totalscore = _totalscore +score;
     setState(() {
       _questionIndex = _questionIndex + 1;
-      // excute();
     });
   }
-  Void _resetQuiz() {
+
+  void _resetQuiz() {
     Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
   }
 
@@ -60,15 +60,15 @@ class _CrapState extends State<Crap> {
       ),
       body: _questionIndex < _personalitytriatquestions.length
           ? Column(
-              children: <Widget>[
-                Perr(
+            children: <Widget>[
+              Perr(
                   perQue: _personalitytriatquestions,
                   perIndex: _questionIndex,
                   answer: _answerQuestion,
                 ),
-              ],
-            )
-          : Result(_resetQuiz),
+            ],
+          )
+          : Result(_resetQuiz, _totalscore),
     );
   }
 }

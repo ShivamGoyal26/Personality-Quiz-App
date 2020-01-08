@@ -10,7 +10,10 @@ class PerAns extends StatelessWidget {
       margin: EdgeInsets.all(20),
       width: double.infinity,
       child: FlatButton(
-        child: Text(ans, style: TextStyle(fontSize: 15),),
+        child: Text(
+          ans,
+          style: TextStyle(fontSize: 15),
+        ),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(18.0),
             side: BorderSide(color: Colors.grey)),
@@ -20,10 +23,5 @@ class PerAns extends StatelessWidget {
         onPressed: selectHandler,
       ),
     );
-    // child: RaisedButton(
-    //   color: Colors.purple,
-    //   textColor: Colors.white,
-    //   child: Text(ans),
-    //   onPressed: selectHandler,
   }
 }

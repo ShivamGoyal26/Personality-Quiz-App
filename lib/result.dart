@@ -2,19 +2,18 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final Function reset;
-  Result(this.reset);
+  final int score;
+  Result(this.reset, this.score);
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Container(
             margin: EdgeInsets.all(20),
             child: Center(
               child: Text(
-                "No More Questions Left",
+                '$score No More Questions Left',
                 style: TextStyle(fontSize: 25),
               ),
             ),
