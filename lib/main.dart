@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personality_quiz/Fashion_Style_Quiz_Section/FashionStyleSection.dart';
 import './Dream_House_Quiz_Section/DreamHouseSection.dart';
 
 void main() {
@@ -18,15 +19,19 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  void excute() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Crap()));
+  void excute(String id) {
+    if(id == 'house'){
+Navigator.push(context, MaterialPageRoute(builder: (context) => Crap()));
+    }
+    else{
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Fashion()));
+    }
+    
   }
 
   final getr = const [
-    "What Dream House Suits you Best Quiz",
-    "Situation Test",
-    "Animal Quiz",
-    "Eagle Quiz",
+    {'type': 'What Dream House Suits you Best Quiz', 'id': 'house'},
+    {'type': 'What Fashion Style Suits you Best Quiz', 'id': 'fashion'},
   ];
   @override
   Widget build(BuildContext context) {
@@ -41,7 +46,7 @@ class _MyAppState extends State<MyApp> {
                 margin: EdgeInsets.all(20),
                 child: FlatButton(
                   child: Text(
-                    val,
+                    val['type'],
                     style: TextStyle(fontSize: 15),
                   ),
                   shape: RoundedRectangleBorder(
@@ -50,7 +55,7 @@ class _MyAppState extends State<MyApp> {
                   color: Colors.white,
                   textColor: Colors.black,
                   padding: EdgeInsets.all(20.0),
-                  onPressed: excute,
+                  onPressed: (){excute(val['id']);},
                 ));
           }).toList(),
         ));
