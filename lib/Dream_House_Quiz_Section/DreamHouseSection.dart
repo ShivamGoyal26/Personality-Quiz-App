@@ -112,7 +112,7 @@ class _DreamHouseState extends State<DreamHouse> {
               answer: _answerQuestion,
               perQue: _dreamHouseQuestions,
             )
-          : Result(_resetQuiz, _totalscore),
+          : DreamHouseResult(_resetQuiz, _totalscore),
     );
   }
 }

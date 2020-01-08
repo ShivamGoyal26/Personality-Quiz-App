@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class Result extends StatelessWidget {
+class DreamHouseResult extends StatelessWidget {
   final Function reset;
   final int score;
-  Result(this.reset, this.score);
+  DreamHouseResult(this.reset, this.score);
 
   String get resultPhrase {
     String resultText;

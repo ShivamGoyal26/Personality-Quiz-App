@@ -12,7 +12,7 @@ class _FashionStyleState extends State<FashionStyle> {
   var _questionIndex = 0;
   var _totalscore = 0;
 
-  final _dreamHouseQuestions = const [
+  final _fashionStyleQuestions = const [
     {
       'que': 'Pick One',
       'ans': [
@@ -101,18 +101,18 @@ class _FashionStyleState extends State<FashionStyle> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "What Dream House Suits you Best Quiz",
+          "What Fashion Style Suits you Best Quiz",
           style: TextStyle(fontSize: 18),
         ),
       ),
-      body: _questionIndex < _dreamHouseQuestions.length
+      body: _questionIndex < _fashionStyleQuestions.length
           ? FashionMap(
               
               perIndex: _questionIndex,
               answer: _answerQuestion,
-              perQue: _dreamHouseQuestions,
+              perQue: _fashionStyleQuestions,
             )
-          : Result(_resetQuiz, _totalscore),
+          : FashionStyleResult(_resetQuiz, _totalscore),
     );
   }
 }
