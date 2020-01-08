@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './PersonalityQuiz.dart';
+import './Dream_House_Quiz_Section/DreamHouseSection.dart';
 
 void main() {
   runApp(MaterialApp(

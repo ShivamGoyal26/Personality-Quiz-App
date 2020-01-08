@@ -7,14 +7,15 @@ class Result extends StatelessWidget {
 
   String get resultPhrase {
     String resultText;
-    if (score <= 8) {
-      resultText = "You are awesome";
-    } else if (score <= 12) {
-      resultText = "You are Likable";
-    } else if (score <= 16) {
-      resultText = "You are cool";
-    } else {
-      resultText = "You are bad";
+    if (score >= 0 && score <= 20) {
+      resultText = "Luxury Cabin \t In the Woods";
+    } else if (score >= 30 && score <= 40) {
+      resultText = "Farm Estate";
+    } else if (score >= 50 && score <= 80) {
+      resultText = "Massive Mansion";
+    }
+    else if(score >= 90 && score <= 100) {
+      resultText = "City Penthouse";
     }
     return resultText;
   }

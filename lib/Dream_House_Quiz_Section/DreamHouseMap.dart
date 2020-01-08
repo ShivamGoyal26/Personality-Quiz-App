@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:personality_quiz/peranswer.dart';
-import './PerQuestions.dart';
+import './DreamHouseAnswers.dart';
+import './DreamHouseQuestions.dart';
 
 class Perr extends StatelessWidget {
   final List<Map<String, Object>> perQue;

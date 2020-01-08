@@ -9,13 +9,23 @@ class PerAns extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(8.0)),
-            ),
+        new ClipRRect(
+          // borderRadius: new BorderRadius.circular(40.0),
+          child: Image.asset(
+            imagee,
             width: 200,
             height: 200,
-            child: Image.asset(imagee)),
+          ),
+        ),
+
+        // Container(
+        //   decoration: BoxDecoration(
+        //     borderRadius: BorderRadius.all(Radius.circular(30.0)),
+        //   ),
+        //   child: Image.asset(imagee),
+        //   width: 200,
+        //   height: 200,
+        // ),
         Container(
           margin: EdgeInsets.all(20),
           width: double.infinity,
