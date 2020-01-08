@@ -11,7 +11,7 @@ class PerAns extends StatelessWidget {
       children: <Widget>[
         Container(
             decoration: BoxDecoration(
-              color: Colors.teal,
+              // color: Colors.teal,
               borderRadius: BorderRadius.all(Radius.circular(8.0)),
             ),
             width: 200,
