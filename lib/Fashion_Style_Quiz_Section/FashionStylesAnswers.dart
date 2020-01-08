@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class HouseAnswers extends StatelessWidget {
+class FashionAnswers extends StatelessWidget {
   final String answer;
   final Function selectHandler;
   final String image;
-  HouseAnswers(this.answer, this.selectHandler, this.image);
+  FashionAnswers(this.answer, this.selectHandler, this.image);
   @override
   Widget build(BuildContext context) {
     return Column(

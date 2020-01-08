@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import './DreamHouseAnswers.dart';
-import './DreamHouseQuestions.dart';
+import './FashionStyleQuestions.dart';
+import './FashionStylesAnswers.dart';
 
-class HouseMap extends StatelessWidget {
+class FashionMap extends StatelessWidget {
   final List<Map<String, Object>> perQue;
   final int perIndex;
   final Function answer;
-  HouseMap({this.perQue, this.perIndex, this.answer});
+  FashionMap({this.perQue, this.perIndex, this.answer});
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        HouseQuestions(perQue[perIndex]['que']),
+        FashionQuestions(perQue[perIndex]['que']),
         ...(perQue[perIndex]['ans'] as List<Map<String, Object>>).map((val) {
-          return HouseAnswers(val['text'], (){answer(val['score']);}, val['image']);
+          return FashionAnswers(val['text'], (){answer(val['score']);}, val['image']);
         }).toList()
       ],
     );

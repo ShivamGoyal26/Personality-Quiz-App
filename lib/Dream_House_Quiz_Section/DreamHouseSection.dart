@@ -1,20 +1,18 @@
-// import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:personality_quiz/main.dart';
 import './DreamHouseResults.dart';
 import './DreamHouseMap.dart';
 
-class Crap extends StatefulWidget {
+class DreamHouse extends StatefulWidget {
   @override
-  _CrapState createState() => _CrapState();
+  _DreamHouseState createState() => _DreamHouseState();
 }
 
-class _CrapState extends State<Crap> {
+class _DreamHouseState extends State<DreamHouse> {
   var _questionIndex = 0;
   var _totalscore = 0;
 
-  final _personalitytriatquestions = const [
+  final _dreamHouseQuestions = const [
     {
       'que': 'Pick One',
       'ans': [
@@ -64,7 +62,7 @@ class _CrapState extends State<Crap> {
         {'text': '2nd', 'score': 0, 'image': 'assets/images/12.PNG'},
       ],
     },
-     {
+    {
       'que': 'Pick One',
       'ans': [
         {'text': '1st', 'score': 10, 'image': 'assets/images/16.PNG'},
@@ -107,15 +105,12 @@ class _CrapState extends State<Crap> {
           style: TextStyle(fontSize: 18),
         ),
       ),
-      body: _questionIndex < _personalitytriatquestions.length
-          ? Column(
-              children: <Widget>[
-                Perr(
-                  perQue: _personalitytriatquestions,
-                  perIndex: _questionIndex,
-                  answer: _answerQuestion,
-                ),
-              ],
+      body: _questionIndex < _dreamHouseQuestions.length
+          ? HouseMap(
+              
+              perIndex: _questionIndex,
+              answer: _answerQuestion,
+              perQue: _dreamHouseQuestions,
             )
           : Result(_resetQuiz, _totalscore),
     );

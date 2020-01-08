@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personality_quiz/Fashion_Style_Quiz_Section/FashionStyleSection.dart';
+import './Fashion_Style_Quiz_Section/FashionStyleSection.dart';
 import './Dream_House_Quiz_Section/DreamHouseSection.dart';
 
 void main() {
@@ -21,10 +21,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   void excute(String id) {
     if(id == 'house'){
-Navigator.push(context, MaterialPageRoute(builder: (context) => Crap()));
+Navigator.push(context, MaterialPageRoute(builder: (context) => DreamHouse()));
     }
     else{
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Fashion()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => FashionStyle()));
     }
     
   }
