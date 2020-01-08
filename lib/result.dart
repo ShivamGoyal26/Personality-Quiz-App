@@ -4,6 +4,21 @@ class Result extends StatelessWidget {
   final Function reset;
   final int score;
   Result(this.reset, this.score);
+
+  String get resultPhrase {
+    String resultText;
+    if (score <= 8) {
+      resultText = "You are awesome";
+    } else if (score <= 12) {
+      resultText = "You are Likable";
+    } else if (score <= 16) {
+      resultText = "You are cool";
+    } else {
+      resultText = "You are bad";
+    }
+    return resultText;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -13,7 +28,7 @@ class Result extends StatelessWidget {
             margin: EdgeInsets.all(20),
             child: Center(
               child: Text(
-                '$score No More Questions Left',
+                '$resultPhrase',
                 style: TextStyle(fontSize: 25),
               ),
             ),

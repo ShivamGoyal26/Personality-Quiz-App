@@ -7,6 +7,7 @@ void main() {
     title: "Personality Questions",
     theme: ThemeData(
       primarySwatch: Colors.purple,
+      fontFamily: 'OpenSans',
     ),
   ));
 }
@@ -22,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   final getr = const [
-    "Personality Triat",
+    "What Dream House Suits you Best Quiz",
     "Situation Test",
     "Animal Quiz",
     "Eagle Quiz",

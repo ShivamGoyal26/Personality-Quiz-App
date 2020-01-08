@@ -16,33 +16,37 @@ class _CrapState extends State<Crap> {
 
   final _personalitytriatquestions = const [
     {
-      'que': 'What is your Favorite Color',
+      'que': 'Pick One',
       'ans': [
-        {'text': 'Black', 'score': 10},
-        {'text': 'Red', 'score': 5},
-        {'text': 'Blue', 'score': 0},
+        {'text': '1st', 'score': 10, 'image': 'assets/images/d.jpeg'},
+        {'text': '2nd', 'score': 0, 'image': 'assets/images/d.jpeg'},
       ],
     },
     {
-      'que': "what's your favorite animal",
+      'que': 'Pick One',
       'ans': [
-        {'text': 'Wolf', 'score': 10},
-        {'text': 'Tiger', 'score': 5},
-        {'text': 'Lion', 'score': 0}
+        {'text': '1st', 'score': 10, 'image': 'assets/images/3.PNG'},
+        {'text': '2nd', 'score': 0, 'image': 'assets/images/4.PNG'},
       ],
     },
     {
-      'que': "what's your favorite car",
+      'que': 'Pick One',
       'ans': [
-        {'text': 'Lamborghini', 'score': 10},
-        {'text': 'Audi', 'score': 5},
-        {'text': 'Bmw', 'score': 0}
+        {'text': '1st', 'score': 10, 'image': 'assets/images/6.PNG'},
+        {'text': '2nd', 'score': 0, 'image': 'assets/images/5.PNG'},
+      ],
+    },
+    {
+      'que': 'Pick One',
+      'ans': [
+        {'text': '1st', 'score': 10, 'image': 'assets/images/7.PNG'},
+        {'text': '2nd', 'score': 0, 'image': 'assets/images/8.PNG'},
       ],
     },
   ];
 
   void _answerQuestion(int score) {
-    _totalscore = _totalscore +score;
+    _totalscore = _totalscore + score;
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
@@ -60,14 +64,14 @@ class _CrapState extends State<Crap> {
       ),
       body: _questionIndex < _personalitytriatquestions.length
           ? Column(
-            children: <Widget>[
-              Perr(
+              children: <Widget>[
+                Perr(
                   perQue: _personalitytriatquestions,
                   perIndex: _questionIndex,
                   answer: _answerQuestion,
                 ),
-            ],
-          )
+              ],
+            )
           : Result(_resetQuiz, _totalscore),
     );
   }

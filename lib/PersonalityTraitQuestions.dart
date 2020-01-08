@@ -13,7 +13,7 @@ class Perr extends StatelessWidget {
       children: <Widget>[
         PersonalityStru(perQue[perIndex]['que']),
         ...(perQue[perIndex]['ans'] as List<Map<String, Object>>).map((val) {
-          return PerAns(val['text'], (){answer(val['score']);});
+          return PerAns(val['text'], (){answer(val['score']);}, val['image']);
         }).toList()
       ],
     );
