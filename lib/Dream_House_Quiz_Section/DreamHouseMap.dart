@@ -13,7 +13,9 @@ class HouseMap extends StatelessWidget {
       children: <Widget>[
         HouseQuestions(perQue[perIndex]['que']),
         ...(perQue[perIndex]['ans'] as List<Map<String, Object>>).map((val) {
-          return HouseAnswers(val['text'], (){answer(val['score']);}, val['image']);
+          return HouseAnswers(val['text'], () {
+            answer(val['score']);
+          }, val['image']);
         }).toList()
       ],
     );

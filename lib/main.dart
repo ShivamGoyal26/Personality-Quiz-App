@@ -20,13 +20,13 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   void excute(String id) {
-    if(id == 'house'){
-Navigator.push(context, MaterialPageRoute(builder: (context) => DreamHouse()));
+    if (id == 'house') {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => DreamHouse()));
+    } else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => FashionStyle()));
     }
-    else{
-      Navigator.push(context, MaterialPageRoute(builder: (context) => FashionStyle()));
-    }
-    
   }
 
   final getr = const [
@@ -55,7 +55,9 @@ Navigator.push(context, MaterialPageRoute(builder: (context) => DreamHouse()));
                   color: Colors.white,
                   textColor: Colors.black,
                   padding: EdgeInsets.all(20.0),
-                  onPressed: (){excute(val['id']);},
+                  onPressed: () {
+                    excute(val['id']);
+                  },
                 ));
           }).toList(),
         ));

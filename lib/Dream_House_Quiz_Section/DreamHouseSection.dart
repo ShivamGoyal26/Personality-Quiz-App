@@ -14,70 +14,70 @@ class _DreamHouseState extends State<DreamHouse> {
 
   final _dreamHouseQuestions = const [
     {
-      'que': 'Pick One',
+      'que': ['1Q. Pick One', 'ftf'],
       'ans': [
         {'text': '1st', 'score': 10, 'image': 'assets/images/1.PNG'},
         {'text': '2nd', 'score': 0, 'image': 'assets/images/2.PNG'},
       ],
     },
     {
-      'que': 'Pick One',
+      'que': '2Q. Pick One',
       'ans': [
         {'text': '1st', 'score': 10, 'image': 'assets/images/3.PNG'},
         {'text': '2nd', 'score': 0, 'image': 'assets/images/4.PNG'},
       ],
     },
     {
-      'que': 'Pick One',
+      'que': '3Q. Pick One',
       'ans': [
         {'text': '1st', 'score': 0, 'image': 'assets/images/5.PNG'},
         {'text': '2nd', 'score': 10, 'image': 'assets/images/6.PNG'},
       ],
     },
     {
-      'que': 'Pick One',
+      'que': '4Q. Pick One',
       'ans': [
         {'text': '1st', 'score': 10, 'image': 'assets/images/7.PNG'},
         {'text': '2nd', 'score': 0, 'image': 'assets/images/8.PNG'},
       ],
     },
     {
-      'que': 'Pick One',
+      'que': '5Q .Pick One',
       'ans': [
         {'text': '1st', 'score': 0, 'image': 'assets/images/10.PNG'},
         {'text': '2nd', 'score': 10, 'image': 'assets/images/9.PNG'},
       ],
     },
     {
-      'que': 'Pick One',
+      'que': '6Q. Pick One',
       'ans': [
         {'text': '1st', 'score': 0, 'image': 'assets/images/20.PNG'},
         {'text': '2nd', 'score': 10, 'image': 'assets/images/19.PNG'},
       ],
     },
     {
-      'que': 'Pick One',
+      'que': '7Q. Pick One',
       'ans': [
         {'text': '1st', 'score': 10, 'image': 'assets/images/11.PNG'},
         {'text': '2nd', 'score': 0, 'image': 'assets/images/12.PNG'},
       ],
     },
     {
-      'que': 'Pick One',
+      'que': '8Q. Pick One',
       'ans': [
         {'text': '1st', 'score': 10, 'image': 'assets/images/16.PNG'},
         {'text': '2nd', 'score': 0, 'image': 'assets/images/15.PNG'},
       ],
     },
     {
-      'que': 'Pick One',
+      'que': '9Q. Pick One',
       'ans': [
         {'text': '1st', 'score': 0, 'image': 'assets/images/14.PNG'},
         {'text': '2nd', 'score': 10, 'image': 'assets/images/13.PNG'},
       ],
     },
     {
-      'que': 'Pick One',
+      'que': '10Q. Pick One',
       'ans': [
         {'text': '1st', 'score': 0, 'image': 'assets/images/17.PNG'},
         {'text': '2nd', 'score': 10, 'image': 'assets/images/18.PNG'},
