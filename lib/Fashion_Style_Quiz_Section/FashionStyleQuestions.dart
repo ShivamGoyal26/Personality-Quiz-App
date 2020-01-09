@@ -9,7 +9,7 @@ class FashionQuestions extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(20),
       child: Text(
-        'Q. $question',
+        '$question',
         style: TextStyle(fontSize: 25),
       ),
     );
